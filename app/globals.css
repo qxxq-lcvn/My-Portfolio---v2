@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .decoration-border\/75 {
+    text-decoration-color: rgba(
+      222,
+      222,
+      110,
+      0.75
+    ); /* Custom color with 75% opacity */
+  }
+}
+
+body {
+  font-family: sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: rgb(243, 243, 243);
+    --foreground: rgb(117, 114, 153);
+    --card: rgb(243, 243, 243);
+    --card-foreground: rgb(76, 76, 75);
+    --popover: rgb(243, 243, 243);
+    --popover-foreground: rgb(76, 76, 75);
+    --primary: rgb(243, 243, 243);
+    --primary-foreground: rgb(225, 187, 195);
+    --secondary: rgb(243, 243, 243);
+    --secondary-foreground: rgb(222, 222, 110);
+    --muted: rgb(243, 243, 243);
+    --muted-foreground: rgb(76, 76, 75);
+    --accent: rgb(243, 243, 243);
+    --accent-foreground: rgb(117, 114, 153);
+    --destructive: rgb(255, 45, 45);
+    --destructive-foreground: rgb(243, 243, 243);
+    --border: rgb(117, 114, 153);
+    --input: rgb(225, 187, 195);
+    --ring: rgb(10, 10, 10);
+    --chart-1: rgb(222, 67, 49);
+    --chart-2: rgb(33, 120, 87);
+    --chart-3: rgb(23, 74, 94);
+    --chart-4: rgb(204, 215, 99);
+    --chart-5: rgb(237, 220, 68);
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: rgb(10, 10, 10);
+    --foreground: rgb(225, 187, 195);
+    --card: rgb(10, 10, 10);
+    --card-foreground: rgb(117, 114, 153);
+    --popover: rgb(10, 10, 10);
+    --popover-foreground: rgb(117, 114, 153);
+    --primary: rgb(10, 10, 10);
+    --primary-foreground: rgb(225, 187, 195);
+    --secondary: rgb(10, 10, 10);
+    --secondary-foreground: rgb(222, 222, 110);
+    --muted: rgb(76, 76, 75);
+    --muted-foreground: rgb(243, 243, 243);
+    --accent: rgb(10, 10, 10);
+    --accent-foreground: rgb(243, 243, 243);
+    --destructive: rgb(130, 20, 20);
+    --destructive-foreground: rgb(243, 243, 243);
+    --border: rgb(225, 187, 195);
+    --input: rgb(117, 114, 153);
+    --ring: rgb(215, 215, 215);
+    --chart-1: rgb(51, 102, 255);
+    --chart-2: rgb(51, 153, 102);
+    --chart-3: rgb(204, 102, 51);
+    --chart-4: rgb(153, 51, 204);
+    --chart-5: rgb(255, 51, 102);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .title {
+    @apply decoration-border/75 font-serif text-3xl font-bold underline underline-offset-8;
+  }
+
+  .prose {
+    @apply text-muted-foreground;
+  }
+
+  .prose pre {
+    @apply overflow-x-auto rounded-lg bg-accent px-5 py-4 text-sm;
+  }
+
+  .prose code {
+    @apply rounded-lg px-1 py-0.5;
+  }
+
+  .prose pre code {
+    @apply p-0;
+    line-height: 1.75;
+  }
+
+  .prose code span {
+    @apply font-medium;
+  }
+}
