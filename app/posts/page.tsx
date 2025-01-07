@@ -1,4 +1,3 @@
-import Posts from '@/components/posts'
 import PostsWithSearch from '@/components/posts-with-search'
 import { getPosts } from '@/lib/posts'
 
